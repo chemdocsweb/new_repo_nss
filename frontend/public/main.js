@@ -88,15 +88,19 @@ function paginate(page) {
   var right_btn = document.getElementById("right_btn");
   
   if (page === 1) {
-    left_btn.style.display = 'none';
+    left_btn.style.opacity = 0;
+    left_btn.style.pointerEvents = 'none';
   } else {
-    left_btn.style.display = 'block';
+    left_btn.style.opacity = 1;
+    left_btn.style.pointerEvents = 'auto';
   }
 
   if (page === no_of_pages) {
-    right_btn.style.display = 'none';
+    right_btn.style.opacity = 0;
+    right_btn.style.pointerEvents = 'none';
   } else {
-    right_btn.style.display = 'block';
+    right_btn.style.opacity = 1;
+    left_btn.style.pointerEvents = 'auto';
   }
 }
 
