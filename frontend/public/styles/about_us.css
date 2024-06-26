@@ -1,0 +1,57 @@
+.about_us .back_button_div {
+  height: 10vh;
+}
+.about_us .text {
+  
+  height: 50vh;
+  margin: 0 .75rem;
+}
+.about_us .head {
+  text-align: center;
+}
+.about_us .head h3 {
+  font-size: 1.5rem;
+  margin: .5rem 0;
+}
+.about_us .paragraph p {
+  margin: 1rem;
+  text-align: justify;
+}
+.about_us .symbols {
+  display: block;
+  height: 40vh;
+  margin: 1rem .75rem;
+}
+.about_us .symbol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: .25rem 0;
+}
+.about_us .symbol h3 {
+  margin: .5rem;
+  font-size: .75rem;
+  text-align: center;
+  width: 40%;
+}
+.about_us .symbol img {
+  width: 5rem;
+}
+@media only screen and (min-width: 768px) {
+  .about_us .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about_us .head {
+    flex-grow: 1;
+    width: 100%;
+  }
+  .about_us .symbols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

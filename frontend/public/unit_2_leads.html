@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+  <link rel="icon" href="images/logos/NSS_logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <title>Unit-2</title>
+</head>
+<body>
+  <img id="background" src="images/logos/NSS_logo.png">
+  <main class="unit_mem_main">
+    <div class="back_button_div">
+      <a class="back_button blue" href="unit_2.html"><i class="fa fa-arrow-left"></i></a>
+    </div>
+    <section class="unit_mem_sections">
+      <!--Tab to edit-->
+      <div class="unit_mem_heading" style="margin-top: 2rem;">
+        <p>MEET OUR TEAM</p>
+      </div>
+      <div class="unit_mem_cards">
+        {% for mem in core_mems %}
+        <div class="unit_mem_card">
+          <div class="unit_mem_photo">
+            <img src="{{ mem['img_src'] }}">
+          </div>
+          <div class="mem_details">
+            <h3>
+              {{ mem['name'] }}
+            </h3>
+            <h4>
+              {{ mem['role'] }}
+            </h4>
+            <div class="mem_social">
+              <a href="{{ mem['linkedin'] }}"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto: {{ mem['mail'] }}"><i class="fa fa-envelope"></i></a>
+              <a href="{{ mem['instagram'] }}"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <section class="unit_mem_sections">
+      <!--Tab to edit-->
+      <div class="unit_mem_heading">
+        <p>BRANCH COORDINATORS</p>
+      </div>
+      <div class="unit_mem_cards">
+        {% for mem in branch_mems %}
+        <div class="unit_mem_card">
+          <div class="unit_mem_photo">
+            <img src="{{ mem['img_src'] }}">
+          </div>
+          <div class="mem_details">
+            <h3>
+              {{ mem['name'] }}
+            </h3>
+            <h4>
+              {{ mem['role'] }}
+            </h4>
+            <div class="mem_social">
+              <a href="{{ mem['linkedin'] }}"><i class="fa fa-linkedin"></i></a>
+              <a href="mailto: {{ mem['mail'] }}"><i class="fa fa-envelope"></i></a>
+              <a href="{{ mem['instagram'] }}"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+</body>
+<script type="text/javascript" src="main.js"></script>
+</html>

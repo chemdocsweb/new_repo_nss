@@ -1,0 +1,44 @@
+:root {
+  --background_color: #EBF1F8;
+  --cyanish_color: #A2E6FC;
+  --bluish_color: #0E3570;
+  --bluish_color1: #163976;
+  --bluish_color2: #3A3C71;
+  --bluish_color3: #2E528F;
+  --redish_color: #D12E2D;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Times New Roman;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: var(--background_color);
+}
+.about_us {
+  min-height: 100dvh;
+  height: 100%;
+  background: linear-gradient(to bottom, #A8E9FD, #fff);
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.back_button_div {
+  width: 100%;
+  padding: .25rem;
+}
+.back_button {
+  font-size: 2rem;
+}
+.back_button.blue {
+  color: var(--bluish_color);
+}
+.back_button.cyan {
+  color: var(--cyanish_color);
+}
