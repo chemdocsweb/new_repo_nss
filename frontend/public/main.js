@@ -1,3 +1,7 @@
+var screenWidth = window.innerWidth;
+var screenHeight = window.innerHeight;
+var screenAspect_ratio = screenHeight/screenWidth
+
 function back(){
   window.history.back();
 }
@@ -86,7 +90,7 @@ function paginate(page) {
   });
   var left_btn = document.getElementById("left_btn");
   var right_btn = document.getElementById("right_btn");
-  
+
   if (page === 1) {
     left_btn.style.opacity = 0;
     left_btn.style.pointerEvents = 'none';
@@ -132,20 +136,11 @@ function description(element) {
 
 
 
-var screenWidth = window.innerWidth;
-var screenHeight = window.innerHeight;
-var screenAspect_ratio = screenHeight/screenWidth
+
 
 if (window.location.href.includes("index.html")) {
   
 } else if (window.location.href.includes("gallery.html")) {
-  var current_page = 1;
-  var gallery_cards = Array.from(document.getElementsByClassName('gallery_img'));
-  var gallery_img_count = gallery_cards.length;
-  var imgs_per_page = 4;
-  var no_of_pages = Math.ceil(gallery_img_count / imgs_per_page);
-  paginate(current_page);
-
 } else if (window.location.href.includes("events.html")) {
   var upcoming_events = document.getElementById('upcoming_events');
   upcoming_events.style.display = 'block';

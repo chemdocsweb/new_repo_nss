@@ -121,5 +121,50 @@
   </main>
 </body>
 <script type="text/javascript" src="main.js"></script>
+<script>
 
+  window.addEventListener('resize', update_image_per_page())
+
+  function update_image_per_page() {
+    var screenWidth = window.innerWidth;
+    if (screenWidth < 768 && screenWidth > 1024) {
+      var imgs_per_page = 6;
+    } else {
+      var imgs_per_page = 4;
+    }
+    console.log(imgs_per_page)
+  }
+  function paginate(page) {
+  var start = (page - 1) * imgs_per_page;
+  var end = start + imgs_per_page;
+  gallery_cards.forEach((card, index) => {
+    card.style.display = (index >= start && index < end) ? 'block' : 'none';
+  });
+  var left_btn = document.getElementById("left_btn");
+  var right_btn = document.getElementById("right_btn");
+
+  if (page === 1) {
+    left_btn.style.opacity = 0;
+    left_btn.style.pointerEvents = 'none';
+  } else {
+    left_btn.style.opacity = 1;
+    left_btn.style.pointerEvents = 'auto';
+  }
+
+  if (page === no_of_pages) {
+    right_btn.style.opacity = 0;
+    right_btn.style.pointerEvents = 'none';
+  } else {
+    right_btn.style.opacity = 1;
+    right_btn.style.pointerEvents = 'auto';
+  }
+}
+  var current_page = 1;
+  var gallery_cards = Array.from(document.getElementsByClassName('gallery_img'));
+  var gallery_img_count = gallery_cards.length; 
+  var imgs_per_page = 4;
+  var no_of_pages = Math.ceil(gallery_img_count / imgs_per_page);
+  paginate(current_page, imgs_per_page);
+
+</script>
 </html>
