@@ -100,7 +100,7 @@ function paginate(page) {
     right_btn.style.pointerEvents = 'none';
   } else {
     right_btn.style.opacity = 1;
-    left_btn.style.pointerEvents = 'auto';
+    right_btn.style.pointerEvents = 'auto';
   }
 }
 
